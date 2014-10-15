@@ -9,5 +9,5 @@ Usage:
 ```
 docker run -ti --rm \
        -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
-       pshevtsov/R
+       pshevtsov/r
 ```
