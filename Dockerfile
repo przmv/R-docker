@@ -3,7 +3,7 @@ FROM debian:wheezy
 ENV DEBIAN_FRONTEND noninteractive
 ENV CRAN_MIRROR http://cran.rstudio.com/
 
-RUN echo "deb http://$CRAN_MIRROR/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list
+RUN echo "deb $CRAN_MIRROR/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list
 RUN apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
 
 RUN apt-get update; apt-get -y upgrade
