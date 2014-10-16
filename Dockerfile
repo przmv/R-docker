@@ -8,7 +8,8 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
 RUN apt-get update; apt-get -y upgrade
 
-RUN apt-get install -y sudo r-base r-base-dev
+RUN apt-get install -y sudo r-base r-base-dev libcurl4-openssl-dev
+RUN R -e "install.packages('devtools', repos='$CRAN_MIRROR')"
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
