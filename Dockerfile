@@ -26,4 +26,4 @@ WORKDIR /home/developer
 
 RUN echo "options(repos=structure(c(CRAN=\"$CRAN_MIRROR\")))" > $HOME/.Rprofile
 
-CMD ["R", "--vanilla"]
+CMD ["R"]
