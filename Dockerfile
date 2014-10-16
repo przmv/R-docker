@@ -21,7 +21,7 @@ RUN export uid=1000 gid=1000 && \
 
 USER developer
 ENV HOME /home/developer
-WORKDIR $HOME
+WORKDIR /home/developer
 
 RUN echo "options(repos=structure(c(CRAN=\"$CRAN_MIRROR\")))" > $HOME/.Rprofile
 
